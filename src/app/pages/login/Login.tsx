@@ -5,19 +5,20 @@ import TextField from "@mui/material/TextField";
 
 export const Login = () => {
   const [password, setPassword] = useState("");
+
   const [email, setEmail] = useState("");
 
   const history = useNavigate();
-
-  function homeButton() {
-    history("/pagina-inicial");
-  }
 
   const handleEntrar = () => {
     var emailLogin = email;
     var passLogin = password;
     console.log(emailLogin, passLogin);
   };
+
+  function homeButton() {
+    history("/pagina-inicial");
+  }
 
   return (
     <div>
