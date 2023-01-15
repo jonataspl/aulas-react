@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 export const Dashboard = () => {
   const history = useNavigate();
@@ -10,7 +11,9 @@ export const Dashboard = () => {
   return (
     <div>
       <h1>Página Principal</h1>
-      <button onClick={loginButton}>Login</button>
+      <Button variant="contained" onClick={loginButton}>
+        Login
+      </Button>
     </div>
   );
 };

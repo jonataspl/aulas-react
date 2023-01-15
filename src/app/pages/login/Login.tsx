@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { setEnvironmentData } from "worker_threads";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 export const Login = () => {
   const [password, setPassword] = useState("");
@@ -22,24 +23,44 @@ export const Login = () => {
     <div>
       <form>
         <label>
-          <span>E-mail: </span>
-          <input value={email} onChange={(e) => setEmail(e.target.value)} />
-        </label>
-
-        <label>
-          <span>Senha: </span>
-          <input
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
+          <TextField
+            id="filled-basic"
+            label="E-Mail"
+            variant="filled"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            sx={{ margin: "10px 10px" }}
           />
         </label>
 
-        <button type="button" onClick={handleEntrar}>
+        <label>
+          <TextField
+            id="filled-basic"
+            label="Password"
+            variant="filled"
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            sx={{ margin: "10px 10px" }}
+          />
+        </label>
+
+        <Button
+          variant="contained"
+          type="button"
+          onClick={handleEntrar}
+          sx={{ margin: "20px 10px" }}
+        >
           Entrar
-        </button>
+        </Button>
       </form>
       <h1>
-        <button onClick={homeButton}>Home</button>
+        <Button
+          variant="contained"
+          onClick={homeButton}
+          sx={{ margin: "20px 10px" }}
+        >
+          Home
+        </Button>
       </h1>
     </div>
   );
