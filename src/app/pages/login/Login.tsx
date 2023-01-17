@@ -11,9 +11,7 @@ export const Login = () => {
   const history = useNavigate();
 
   const handleEntrar = () => {
-    var emailLogin = email;
-    var passLogin = password;
-    console.log(emailLogin, passLogin);
+    console.log(`E-mail: ${email}, Senha:${password}`);
   };
 
   function homeButton() {
